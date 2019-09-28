@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Panel Admin - DoceMonos</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -15,11 +14,14 @@
 <body>
 
     <header>
-        <nav class="container nav nav-pills flex-column flex-sm-row">
+        <!--nav class="container nav nav-pills flex-column flex-sm-row">
             <a class="flex-sm-fill text-sm-center nav-link" href="#">Dashboard</a>
             <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
             <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-        </nav>
+        </nav-->
+        <div>
+
+        </div>
     </header>
 
     <div id="home">
@@ -28,12 +30,451 @@
                 <div class="col-xs-12 col-md-6">
 
                 </div>
-
-                
-
             </div>
         </div>
+
     </div>
+    <section class="container-fluid p-0">
+        <div class="timer">
+            <div class="timer-content d-flex">
+                <div class="timer-content-left w-100">
+                    <div class="d-flex">
+                        <p class="w-100" contenteditable="true">Nombre de la tarea</p>
+                        <input type="timer" class="date button-timer flex-shrink-1" value="0:00:00">
+                    </div>
+                </div>
+                <div class="timer-content-right timer-content-buttons flex-shrink-1">
+                    <div class="d-flex">
+                        <div class="timer-button-play">
+                            <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="button-action-play" fill="#6DD400" fill-rule="nonzero">
+                                        <path
+                                            d="M45.9130435,0 L2.08695652,0 C0.933913043,0 0,0.933913043 0,2.08695652 L0,45.9130435 C0,47.066087 0.933913043,48 2.08695652,48 L45.9130435,48 C47.066087,48 48,47.066087 48,45.9130435 L48,2.08695652 C48,0.933913043 47.066087,0 45.9130435,0 Z M31.8834783,24.8681739 L19.3617391,33.216 C19.1864348,33.3318261 18.9850435,33.3913043 18.7826087,33.3913043 C18.6135652,33.3913043 18.4445217,33.3506087 18.290087,33.2681739 C17.9509565,33.0866087 17.7391304,32.7328696 17.7391304,32.3478261 L17.7391304,15.6521739 C17.7391304,15.2671304 17.9509565,14.9133913 18.290087,14.7318261 C18.6271304,14.5492174 19.0403478,14.5690435 19.3606957,14.784 L31.8824348,23.1318261 C32.1735652,23.325913 32.3478261,23.6514783 32.3478261,24 C32.3478261,24.3485217 32.1735652,24.674087 31.8834783,24.8681739 Z"
+                                            id="Shape"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="timer-button-stop">
+                            <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="button-action-stop" fill="#E02020" fill-rule="nonzero">
+                                        <path
+                                            d="M24,0 C10.7655652,0 0,10.7655652 0,24 C0,37.2344348 10.7655652,48 24,48 C37.2344348,48 48,37.2344348 48,24 C48,10.7655652 37.2344348,0 24,0 Z M33.3913043,32.3478261 C33.3913043,32.9248696 32.9248696,33.3913043 32.3478261,33.3913043 L15.6521739,33.3913043 C15.0751304,33.3913043 14.6086957,32.9248696 14.6086957,32.3478261 L14.6086957,15.6521739 C14.6086957,15.0751304 15.0751304,14.6086957 15.6521739,14.6086957 L32.3478261,14.6086957 C32.9248696,14.6086957 33.3913043,15.0751304 33.3913043,15.6521739 L33.3913043,32.3478261 Z"
+                                            id="Shape"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="timer-button-type">
+                            <div class="timer-button-type-normal">
+                                <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="button-clok-unselect" fill="#000000" fill-rule="nonzero"
+                                            fill-opacity="0.25">
+                                            <g id="clock-2">
+                                                <path
+                                                    d="M10,0.416666667 C4.70727115,0.416666667 0.416666667,4.70727115 0.416666667,10 C0.416666667,15.2927289 4.70727115,19.5833333 10,19.5833333 C15.2927289,19.5833333 19.5833333,15.2927289 19.5833333,10 C19.5773632,4.70974605 15.290254,0.422636836 10,0.416666667 Z M15.8333333,10.4166667 L10,10.4166667 C9.76988135,10.4166667 9.58333333,10.2301186 9.58333333,10 L9.58333333,4.16666667 C9.58333333,3.93654802 9.76988135,3.75 10,3.75 C10.2301186,3.75 10.4166667,3.93654802 10.4166667,4.16666667 L10.4166667,9.58333333 L15.8333333,9.58333333 C16.063452,9.58333333 16.25,9.76988135 16.25,10 C16.25,10.2301186 16.063452,10.4166667 15.8333333,10.4166667 Z"
+                                                    id="Shape"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="timer-button-type-countdown">
+                                <svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="button-countdown-unselect" fill="#000000" fill-rule="nonzero"
+                                            fill-opacity="0.25">
+                                            <g id="countdown">
+                                                <path
+                                                    d="M7.52666667,11.4733333 C7.93291667,11.8795833 8.46625,12.0825 9,12.0825 C9.53333333,12.0825 10.0670833,11.8795833 10.4733333,11.4733333 C11.2854167,10.6608333 11.2854167,9.33916667 10.4733333,8.52708333 C9.805,7.85875 4.51125,4.6975 3.91,4.33916667 C3.74583333,4.24166667 3.53708333,4.2675 3.40208333,4.4025 C3.26708333,4.5375 3.24125,4.74666667 3.33875,4.91041667 C3.69708333,5.51125 6.85833333,10.8045833 7.52666667,11.4733333 Z"
+                                                    id="Path"></path>
+                                                <circle id="Oval" cx="9" cy="2.08333333" r="1.66666667"></circle>
+                                                <path
+                                                    d="M12.8179167,2.54125 C12.6104167,2.44083333 12.3616667,2.52708333 12.26125,2.73375 C12.1608333,2.94083333 12.2470833,3.19 12.45375,3.29041667 C15.2066667,4.62791667 16.9166667,7.35833333 16.9166667,10.4166667 C16.9166667,14.7820833 13.3654167,18.3333333 9,18.3333333 C4.63458333,18.3333333 1.08333333,14.7820833 1.08333333,10.4166667 C1.08333333,10.1866667 0.896666667,10 0.666666667,10 C0.436666667,10 0.25,10.1866667 0.25,10.4166667 C0.25,15.2416667 4.175,19.1666667 9,19.1666667 C13.825,19.1666667 17.75,15.2416667 17.75,10.4166667 C17.75,7.03666667 15.86,4.01875 12.8179167,2.54125 Z"
+                                                    id="Path"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timer-button-moreInfo">
+                            <svg width="6px" height="22px" viewBox="0 0 6 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="timer" transform="translate(-996.000000, -27.000000)" fill="#D8D8D8">
+                                        <g id="header-timer">
+                                            <g id="header-content" transform="translate(24.000000, 14.000000)">
+                                                <g id="header-left" transform="translate(876.000000, 0.000000)">
+                                                    <g id="button-more" transform="translate(96.000000, 13.000000)">
+                                                        <g id="Group-2">
+                                                            <g id="Group">
+                                                                <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                            </g>
+                                                            <g id="Group-Copy"
+                                                                transform="translate(0.000000, 8.000000)">
+                                                                <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                            </g>
+                                                            <g id="Group-Copy-2"
+                                                                transform="translate(0.000000, 16.000000)">
+                                                                <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="timer-list">
+            <h2>Title list 2</h2>
+            <div class="timer-list-item">
+                <div class="timer-content d-flex">
+                    <div class="timer-content-left w-100">
+                        <div class="d-flex">
+                            <p class="w-100" contenteditable="true">Nombre de la tarea</p>
+                            <input type="timer" class="date button-timer flex-shrink-1" value="0:00:00">
+                        </div>
+                    </div>
+                    <div class="timer-content-right timer-content-buttons flex-shrink-1">
+                        <div class="d-flex">
+                            <div class="timer-button-play">
+                                <svg width="30px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="button-action-play" fill="#000000" fill-rule="nonzero" fill-opacity="0.25">
+                                            <path
+                                                d="M45.9130435,0 L2.08695652,0 C0.933913043,0 0,0.933913043 0,2.08695652 L0,45.9130435 C0,47.066087 0.933913043,48 2.08695652,48 L45.9130435,48 C47.066087,48 48,47.066087 48,45.9130435 L48,2.08695652 C48,0.933913043 47.066087,0 45.9130435,0 Z M31.8834783,24.8681739 L19.3617391,33.216 C19.1864348,33.3318261 18.9850435,33.3913043 18.7826087,33.3913043 C18.6135652,33.3913043 18.4445217,33.3506087 18.290087,33.2681739 C17.9509565,33.0866087 17.7391304,32.7328696 17.7391304,32.3478261 L17.7391304,15.6521739 C17.7391304,15.2671304 17.9509565,14.9133913 18.290087,14.7318261 C18.6271304,14.5492174 19.0403478,14.5690435 19.3606957,14.784 L31.8824348,23.1318261 C32.1735652,23.325913 32.3478261,23.6514783 32.3478261,24 C32.3478261,24.3485217 32.1735652,24.674087 31.8834783,24.8681739 Z"
+                                                id="Shape"></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="timer-button-moreInfo">
+                                <svg width="6px" height="22px" viewBox="0 0 6 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="timer" transform="translate(-996.000000, -27.000000)" fill="#D8D8D8">
+                                            <g id="header-timer">
+                                                <g id="header-content" transform="translate(24.000000, 14.000000)">
+                                                    <g id="header-left" transform="translate(876.000000, 0.000000)">
+                                                        <g id="button-more" transform="translate(96.000000, 13.000000)">
+                                                            <g id="Group-2">
+                                                                <g id="Group">
+                                                                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                </g>
+                                                                <g id="Group-Copy"
+                                                                    transform="translate(0.000000, 8.000000)">
+                                                                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                </g>
+                                                                <g id="Group-Copy-2"
+                                                                    transform="translate(0.000000, 16.000000)">
+                                                                    <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="timer-list-item">
+                <div class="timer-content d-flex">
+                    <div class="timer-content-left w-100">
+                        <div class="d-flex">
+                            <p class="w-100" contenteditable="true">Nombre de la tarea</p>
+                            <input type="timer" class="date button-timer flex-shrink-1" value="0:00:00">
+                        </div>
+                    </div>
+                    <div class="timer-content-right timer-content-buttons flex-shrink-1">
+                        <div class="d-flex">
+                            <div class="timer-button-play">
+                                <svg width="30px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="button-action-play" fill="#000000" fill-rule="nonzero" fill-opacity="0.25">
+                                                <path
+                                                    d="M45.9130435,0 L2.08695652,0 C0.933913043,0 0,0.933913043 0,2.08695652 L0,45.9130435 C0,47.066087 0.933913043,48 2.08695652,48 L45.9130435,48 C47.066087,48 48,47.066087 48,45.9130435 L48,2.08695652 C48,0.933913043 47.066087,0 45.9130435,0 Z M31.8834783,24.8681739 L19.3617391,33.216 C19.1864348,33.3318261 18.9850435,33.3913043 18.7826087,33.3913043 C18.6135652,33.3913043 18.4445217,33.3506087 18.290087,33.2681739 C17.9509565,33.0866087 17.7391304,32.7328696 17.7391304,32.3478261 L17.7391304,15.6521739 C17.7391304,15.2671304 17.9509565,14.9133913 18.290087,14.7318261 C18.6271304,14.5492174 19.0403478,14.5690435 19.3606957,14.784 L31.8824348,23.1318261 C32.1735652,23.325913 32.3478261,23.6514783 32.3478261,24 C32.3478261,24.3485217 32.1735652,24.674087 31.8834783,24.8681739 Z"
+                                                    id="Shape"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                            </div>
+                            <div class="timer-button-moreInfo">
+                                <svg width="6px" height="22px" viewBox="0 0 6 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="timer" transform="translate(-996.000000, -27.000000)" fill="#D8D8D8">
+                                                <g id="header-timer">
+                                                    <g id="header-content" transform="translate(24.000000, 14.000000)">
+                                                        <g id="header-left" transform="translate(876.000000, 0.000000)">
+                                                            <g id="button-more" transform="translate(96.000000, 13.000000)">
+                                                                <g id="Group-2">
+                                                                    <g id="Group">
+                                                                        <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                    </g>
+                                                                    <g id="Group-Copy"
+                                                                        transform="translate(0.000000, 8.000000)">
+                                                                        <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                    </g>
+                                                                    <g id="Group-Copy-2"
+                                                                        transform="translate(0.000000, 16.000000)">
+                                                                        <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timer-list">
+            <h2>Title list</h2>
+            <div class="timer-list-item">
+                <div class="timer-content d-flex">
+                    <div class="timer-content-left w-100">
+                        <div class="d-flex">
+                            <p class="w-100" contenteditable="true">Nombre de la tarea</p>
+                            <input type="timer" class="date button-timer flex-shrink-1" value="0:00:00">
+                        </div>
+                    </div>
+                    <div class="timer-content-right timer-content-buttons flex-shrink-1">
+                        <div class="d-flex">
+                            <div class="timer-button-play">
+                                <svg width="30px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="button-action-play" fill="#000000" fill-rule="nonzero" fill-opacity="0.25">
+                                                <path
+                                                    d="M45.9130435,0 L2.08695652,0 C0.933913043,0 0,0.933913043 0,2.08695652 L0,45.9130435 C0,47.066087 0.933913043,48 2.08695652,48 L45.9130435,48 C47.066087,48 48,47.066087 48,45.9130435 L48,2.08695652 C48,0.933913043 47.066087,0 45.9130435,0 Z M31.8834783,24.8681739 L19.3617391,33.216 C19.1864348,33.3318261 18.9850435,33.3913043 18.7826087,33.3913043 C18.6135652,33.3913043 18.4445217,33.3506087 18.290087,33.2681739 C17.9509565,33.0866087 17.7391304,32.7328696 17.7391304,32.3478261 L17.7391304,15.6521739 C17.7391304,15.2671304 17.9509565,14.9133913 18.290087,14.7318261 C18.6271304,14.5492174 19.0403478,14.5690435 19.3606957,14.784 L31.8824348,23.1318261 C32.1735652,23.325913 32.3478261,23.6514783 32.3478261,24 C32.3478261,24.3485217 32.1735652,24.674087 31.8834783,24.8681739 Z"
+                                                    id="Shape"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                            </div>
+                            <div class="timer-button-moreInfo">
+                                <svg width="6px" height="22px" viewBox="0 0 6 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="timer" transform="translate(-996.000000, -27.000000)" fill="#D8D8D8">
+                                                <g id="header-timer">
+                                                    <g id="header-content" transform="translate(24.000000, 14.000000)">
+                                                        <g id="header-left" transform="translate(876.000000, 0.000000)">
+                                                            <g id="button-more" transform="translate(96.000000, 13.000000)">
+                                                                <g id="Group-2">
+                                                                    <g id="Group">
+                                                                        <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                    </g>
+                                                                    <g id="Group-Copy"
+                                                                        transform="translate(0.000000, 8.000000)">
+                                                                        <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                    </g>
+                                                                    <g id="Group-Copy-2"
+                                                                        transform="translate(0.000000, 16.000000)">
+                                                                        <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="timer-list-item">
+                <div class="timer-content d-flex">
+                    <div class="timer-content-left w-100">
+                        <div class="d-flex">
+                            <p class="w-100" contenteditable="true">Nombre de la tarea</p>
+                            <input type="timer" class="date button-timer flex-shrink-1" value="0:00:00">
+                        </div>
+                    </div>
+                    <div class="timer-content-right timer-content-buttons flex-shrink-1">
+                        <div class="d-flex">
+                            <div class="timer-button-play">
+                                <svg width="30px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="button-action-play" fill="#000000" fill-rule="nonzero" fill-opacity="0.25">
+                                                    <path
+                                                        d="M45.9130435,0 L2.08695652,0 C0.933913043,0 0,0.933913043 0,2.08695652 L0,45.9130435 C0,47.066087 0.933913043,48 2.08695652,48 L45.9130435,48 C47.066087,48 48,47.066087 48,45.9130435 L48,2.08695652 C48,0.933913043 47.066087,0 45.9130435,0 Z M31.8834783,24.8681739 L19.3617391,33.216 C19.1864348,33.3318261 18.9850435,33.3913043 18.7826087,33.3913043 C18.6135652,33.3913043 18.4445217,33.3506087 18.290087,33.2681739 C17.9509565,33.0866087 17.7391304,32.7328696 17.7391304,32.3478261 L17.7391304,15.6521739 C17.7391304,15.2671304 17.9509565,14.9133913 18.290087,14.7318261 C18.6271304,14.5492174 19.0403478,14.5690435 19.3606957,14.784 L31.8824348,23.1318261 C32.1735652,23.325913 32.3478261,23.6514783 32.3478261,24 C32.3478261,24.3485217 32.1735652,24.674087 31.8834783,24.8681739 Z"
+                                                        id="Shape"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                            </div>
+                            <div class="timer-button-moreInfo">
+                                <svg width="6px" height="22px" viewBox="0 0 6 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="timer" transform="translate(-996.000000, -27.000000)" fill="#D8D8D8">
+                                                    <g id="header-timer">
+                                                        <g id="header-content" transform="translate(24.000000, 14.000000)">
+                                                            <g id="header-left" transform="translate(876.000000, 0.000000)">
+                                                                <g id="button-more" transform="translate(96.000000, 13.000000)">
+                                                                    <g id="Group-2">
+                                                                        <g id="Group">
+                                                                            <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                        </g>
+                                                                        <g id="Group-Copy"
+                                                                            transform="translate(0.000000, 8.000000)">
+                                                                            <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                        </g>
+                                                                        <g id="Group-Copy-2"
+                                                                            transform="translate(0.000000, 16.000000)">
+                                                                            <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timer-list">
+            <h2>Title list</h2>
+            <div class="timer-list-item">
+                <div class="timer-content d-flex">
+                    <div class="timer-content-left w-100">
+                        <div class="d-flex">
+                            <p class="w-100" contenteditable="true">Nombre de la tarea</p>
+                            <input type="timer" class="date button-timer flex-shrink-1" value="0:00:00">
+                        </div>
+                    </div>
+                    <div class="timer-content-right timer-content-buttons flex-shrink-1">
+                        <div class="d-flex">
+                            <div class="timer-button-play">
+                                <svg width="30px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="button-action-play" fill="#000000" fill-rule="nonzero" fill-opacity="0.25">
+                                                    <path
+                                                        d="M45.9130435,0 L2.08695652,0 C0.933913043,0 0,0.933913043 0,2.08695652 L0,45.9130435 C0,47.066087 0.933913043,48 2.08695652,48 L45.9130435,48 C47.066087,48 48,47.066087 48,45.9130435 L48,2.08695652 C48,0.933913043 47.066087,0 45.9130435,0 Z M31.8834783,24.8681739 L19.3617391,33.216 C19.1864348,33.3318261 18.9850435,33.3913043 18.7826087,33.3913043 C18.6135652,33.3913043 18.4445217,33.3506087 18.290087,33.2681739 C17.9509565,33.0866087 17.7391304,32.7328696 17.7391304,32.3478261 L17.7391304,15.6521739 C17.7391304,15.2671304 17.9509565,14.9133913 18.290087,14.7318261 C18.6271304,14.5492174 19.0403478,14.5690435 19.3606957,14.784 L31.8824348,23.1318261 C32.1735652,23.325913 32.3478261,23.6514783 32.3478261,24 C32.3478261,24.3485217 32.1735652,24.674087 31.8834783,24.8681739 Z"
+                                                        id="Shape"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                            </div>
+                            <div class="timer-button-moreInfo">
+                                <svg width="6px" height="22px" viewBox="0 0 6 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="timer" transform="translate(-996.000000, -27.000000)" fill="#D8D8D8">
+                                                    <g id="header-timer">
+                                                        <g id="header-content" transform="translate(24.000000, 14.000000)">
+                                                            <g id="header-left" transform="translate(876.000000, 0.000000)">
+                                                                <g id="button-more" transform="translate(96.000000, 13.000000)">
+                                                                    <g id="Group-2">
+                                                                        <g id="Group">
+                                                                            <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                        </g>
+                                                                        <g id="Group-Copy"
+                                                                            transform="translate(0.000000, 8.000000)">
+                                                                            <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                        </g>
+                                                                        <g id="Group-Copy-2"
+                                                                            transform="translate(0.000000, 16.000000)">
+                                                                            <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="timer-list-item">
+                <div class="timer-content d-flex">
+                    <div class="timer-content-left w-100">
+                        <div class="d-flex">
+                            <p class="w-100" contenteditable="true">Nombre de la tarea</p>
+                            <input type="timer" class="date button-timer flex-shrink-1" value="0:00:00">
+                        </div>
+                    </div>
+                    <div class="timer-content-right timer-content-buttons flex-shrink-1">
+                        <div class="d-flex">
+                            <div class="timer-button-play">
+                                <svg width="30px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g id="button-action-play" fill="#000000" fill-rule="nonzero" fill-opacity="0.25">
+                                                        <path
+                                                            d="M45.9130435,0 L2.08695652,0 C0.933913043,0 0,0.933913043 0,2.08695652 L0,45.9130435 C0,47.066087 0.933913043,48 2.08695652,48 L45.9130435,48 C47.066087,48 48,47.066087 48,45.9130435 L48,2.08695652 C48,0.933913043 47.066087,0 45.9130435,0 Z M31.8834783,24.8681739 L19.3617391,33.216 C19.1864348,33.3318261 18.9850435,33.3913043 18.7826087,33.3913043 C18.6135652,33.3913043 18.4445217,33.3506087 18.290087,33.2681739 C17.9509565,33.0866087 17.7391304,32.7328696 17.7391304,32.3478261 L17.7391304,15.6521739 C17.7391304,15.2671304 17.9509565,14.9133913 18.290087,14.7318261 C18.6271304,14.5492174 19.0403478,14.5690435 19.3606957,14.784 L31.8824348,23.1318261 C32.1735652,23.325913 32.3478261,23.6514783 32.3478261,24 C32.3478261,24.3485217 32.1735652,24.674087 31.8834783,24.8681739 Z"
+                                                            id="Shape"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                            </div>
+                            <div class="timer-button-moreInfo">
+                                <svg width="6px" height="22px" viewBox="0 0 6 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g id="timer" transform="translate(-996.000000, -27.000000)" fill="#D8D8D8">
+                                                        <g id="header-timer">
+                                                            <g id="header-content" transform="translate(24.000000, 14.000000)">
+                                                                <g id="header-left" transform="translate(876.000000, 0.000000)">
+                                                                    <g id="button-more" transform="translate(96.000000, 13.000000)">
+                                                                        <g id="Group-2">
+                                                                            <g id="Group">
+                                                                                <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                            </g>
+                                                                            <g id="Group-Copy"
+                                                                                transform="translate(0.000000, 8.000000)">
+                                                                                <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                            </g>
+                                                                            <g id="Group-Copy-2"
+                                                                                transform="translate(0.000000, 16.000000)">
+                                                                                <circle id="Oval" cx="3" cy="3" r="3"></circle>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
